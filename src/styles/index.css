@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html, body, .App, #app {
+  height: 100%;
+}
+
+button {
+  background: white;
+  border: 1px solid rgba(0, 0, 255, 0.4);
+  cursor: pointer;
+  outline: none;
+  display: block;
+  padding: 5px 10px;
+  min-width: 70px;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: #fff;
+}
+
+button:hover {
+  background: rgba(0, 0, 255, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid rgba(0, 0, 255, 0.4);
+  padding: 5px;
+}
+
+* {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+}
+
+.row {
+  overflow: auto;
+}
+
+.col {
+  float: left;
+  margin-right: 50px;
+}
+
+.Preview {
+  height: 50%;
+  padding: 5px;
+  position: relative;
+}
+
+.App.fullScreen .Preview {
+  height: 100%;
+}
+
+.App.halfScreen .Preview {
+  height: 50%;
+}
+
+.Container {
+  display: flex;
+  align-items: flex-start;
+
+  cursor: pointer;
+
+  border: 1px dashed;
+  height: 100%;
+
+  background: rgba(0, 0, 255, 0.1);
+  border: 1px solid rgba(0, 0, 255, 0.5);
+  border-radius: 2px;
+}
+
+.Container:hover {
+  background: rgba(0, 0, 255, 0.2);
+}
+
+.Block {
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 255, 0.1);
+  border: 1px solid rgba(0, 0, 255, 0.5);
+
+  position: relative;
+
+}
+
+.Block::after {
+  content: "";
+  background-image: url('/image/layout_grid@2x.png');
+  background-size: 1200px 800px;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.Block:hover, .Block.selected {
+  background: rgba(0, 0, 255, 0.4) !important; /* override inline style  */
+}
+
+.ToolBar {
+  display: flex;
+  padding: 5px 0;
+  margin: 5px;
+  min-height: 25px;
+  background: rgba(0, 0, 255, 0.05);
+  border: 1px solid rgba(0, 0, 255, 0.5);
+  border-radius: 2px;
+}
+
+.ToolBar button {
+  margin-left: 5px;
+}
+
+.ToolBar button:last-child {
+  margin-right: 5px;
+}
+
+.OptionsPanel {
+  padding: 10px;
+  margin: 5px;
+
+  background: rgba(0, 0, 255, 0.05);
+  border: 1px solid rgba(0, 0, 255, 0.5);
+  border-radius: 2px;
+}
+
+.BlockOptions {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.BlockOptions__button {
+  margin-top: 10px;
+}
+
+.BlockOptions__input {
+  height: 20px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 255, 0.5);
+}
+
+.ShortItemFlex {
+  padding: 10px;
+  margin-top: 10px;
+
+  background: rgba(0, 0, 255, 0.05);
+  border: 1px solid rgba(0, 0, 255, 0.5);
+  border-radius: 2px;
+
+  display: inline-block;
+}
